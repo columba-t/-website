@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Фильмы 2026 года</title>
+    </head>
+    <body>
+        <a href="main.html"><h3>Фильмы</h3></a>
+        <a href="list.html"><h2>Список самых популярных фильмов</h2></a>
+        <hr>
+        <details>
+            <summary>График</summary>
+            <form>
+                <h3>Значение по оси OX</h3>
+                <p>
+                    <label>Жанр:
+                        <input type="radio" name="ox" id="genre">
+                    </label>
+                </p>
+                <p>
+                    <label>Страна производства:
+                        <input type="radio" name="ox" id="country">
+                    </label>
+                </p>
+                <p>
+                    <label>Год выпуска
+                        <input type="radio" name="ox" id="year">
+                    </label>
+                </p>
+
+                <h3>Значение по оси OY</h3>
+                <p>
+                    <label>Минимальные сборы
+                        <input type="radio" name="min" id="min">
+                    </label>
+                </p>
+                <p>
+                    <label>Максимальные сборы
+                        <input type="radio" name="max" id="max">
+                    </label>
+                </p>
+                <p>
+                    <label>Средние сборы
+                        <input type="radio" name="award" id="award">
+                    </label>
+                </p>
+
+                <p><button type="button">Построить</button></p>
+
+                <p>Здесь будет график</p>
+            </form>
+        </details>
+        <details>
+            <summary>Фильтр</summary>
+            <form>
+                <p>
+                    <label>Жанр:
+                        <input type="text" name="genre" id="genre">
+                    </label>
+                </p>
+                <p>
+                    <label>Страна производства:
+                        <input type="text" name="country" id="country">
+                    </label>
+                </p>
+                <p>
+                    <label>Год выпуска от:
+                        <input type="number" name="year" id="year_before">
+                        до:
+                        <input type="number" name="year" id="year_before">
+                    </label>
+                </p>
+                <p>
+                    <label>Кассовые сборы от: $
+                        <input type="number" name="money" id="money_before">
+                        млрд до: $
+                        <input type="number" name="money" id="money_after"> млрд
+                    </label>
+                </p>
+                <p>
+                    <label>Режиссер:
+                        <input type="text" name="director" id="director">
+                    </label>
+                </p>
+                <p><button type="button">Найти</button></p>
+            </form>
+        </details>
+
+        <details>
+            <summary>Сортировка</summary>
+            <form>
+                <p>Первый уровень:
+                    <select name="level_1" id="level_1">
+                        <option value="no" selected>Нет</option>
+                        <option value="name">Название</option>
+                        <option value="genre">Жанр</option>
+                        <option value="country">Страна</option>
+                        <option value="year">Год выпуска</option>
+                        <option value="money">Кассовые сборы</option>
+                        <option value="director">Режиссер</option>
+                    </select>
+                    <br>Второй уровень:
+                    <select name="level_2" id="level_2">
+                        <option value="no" selected>Нет</option>
+                        <option value="name">Название</option>
+                        <option value="genre">Жанр</option>
+                        <option value="country">Страна</option>
+                        <option value="year">Год выпуска</option>
+                        <option value="money">Кассовые сборы</option>
+                        <option value="director">Режиссер</option>
+                    </select>
+                    <br>Третий уровень:
+                    <select name="level_3" id="level_3">
+                        <option value="no" selected>Нет</option>
+                        <option value="name">Название</option>
+                        <option value="genre">Жанр</option>
+                        <option value="country">Страна</option>
+                        <option value="year">Год выпуска</option>
+                        <option value="money">Кассовые сборы</option>
+                        <option value="director">Режиссер</option>
+                    </select>
+                </p>
+                <p><button type="button">Сортировать</button></p>
+            </form>
+        </details>
+
+        <table align="center" border="1" cellspacing="0" cellpadding="8">
+            <tr>
+                <td align="center"><b>Название</b></td>
+                <td align="center"><b>Жанр</b></td>
+                <td align="center"><b>Страна производства</b></td>
+                <td align="center"><b>Год выпуска</b></td>
+                <td align="center"><b>Кассовые сборы, $ млрд</b></td>
+                <td align="center"><b>Режиссер</b></td>
+            </tr>
+            <tr>
+                <td> Аватар</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2009</td>
+                <td> 2.92</td>
+                <td> Джеймс Кэмерон</td>
+            </tr>
+            <tr>
+                <td> Мстители: Финал</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 2.79</td>
+                <td> Энтони и Джо Руссо</td>
+            </tr>
+            <tr>
+                <td> Аватар: Путь воды</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2022</td>
+                <td> 2.32</td>
+                <td> Джеймс Кэмерон</td>
+            </tr>
+            <tr>
+                <td> Титаник</td>
+                <td> Драма</td>
+                <td> США</td>
+                <td> 1997</td>
+                <td> 2.26</td>
+                <td> Джеймс Кэмерон</td>
+            </tr>
+            <tr>
+                <td> Звёздные войны: Пробуждение силы</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2015</td>
+                <td> 2.07</td>
+                <td> Джей Джей Абрамс</td>
+            </tr>
+            <tr>
+                <td> Мстители: Война бесконечности</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2018</td>
+                <td> 2.05</td>
+                <td> Энтони и Джо Руссо</td>
+            </tr>
+            <tr>
+                <td> Человек-паук: Нет пути домой</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2021</td>
+                <td> 1.92</td>
+                <td> Джон Уоттс</td>
+            </tr>
+            <tr>
+                <td> Головоломка 2</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2024</td>
+                <td> 1.69</td>
+                <td> Келси Манн</td>
+            </tr>
+            <tr>
+                <td> Мир юрского периода</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2015</td>
+                <td> 1.67</td>
+                <td> Колин Треворроу</td>
+            </tr>
+            <tr>
+                <td> Король Лев</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 1.66</td>
+                <td> Джон Фавро</td>
+            </tr>
+            <tr>
+                <td> Мстители</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2012</td>
+                <td> 1.52</td>
+                <td> Джосс Уидон</td>
+            </tr>
+            <tr>
+                <td> Форсаж 7</td>
+                <td> Боевик</td>
+                <td> Япония</td>
+                <td> 2015</td>
+                <td> 1.52</td>
+                <td> Джеймс Ван</td>
+            </tr>
+            <tr>
+                <td> Барби</td>
+                <td> Комедия</td>
+                <td> Великобритания</td>
+                <td> 2023</td>
+                <td> 1.44</td>
+                <td> Грета Гервиг</td>
+            </tr>
+            <tr>
+                <td> Мстители: Эра Альтрона</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2015</td>
+                <td> 1.40</td>
+                <td> Джосс Уидон</td>
+            </tr>
+            <tr>
+                <td> Супер Марио в кино</td>
+                <td> Мультфильм</td>
+                <td> Япония</td>
+                <td> 2023</td>
+                <td> 1.36</td>
+                <td> Аарон Хорват</td>
+            </tr>
+            <tr>
+                <td> Чёрная пантера</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2018</td>
+                <td> 1.35</td>
+                <td> Райан Куглер</td>
+            </tr>
+            <tr>
+                <td> Гарри Поттер и Дары Смерти. Часть 2</td>
+                <td> Фэнтези</td>
+                <td> США</td>
+                <td> 2011</td>
+                <td> 1.34</td>
+                <td> Дэвид Йейтс</td>
+            </tr>
+            <tr>
+                <td> Звёздные войны: Последние джедаи</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2017</td>
+                <td> 1.33</td>
+                <td> Райан Джонсон</td>
+            </tr>
+            <tr>
+                <td> Холодное сердце</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2013</td>
+                <td> 1.28</td>
+                <td> Дженнифер Ли</td>
+            </tr>
+            <tr>
+                <td> Мир юрского периода: Павшее королевство</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2018</td>
+                <td> 1.31</td>
+                <td> Хуан Антонио Байона</td>
+            </tr>
+            <tr>
+                <td> Красавица и Чудовище</td>
+                <td> Фэнтези</td>
+                <td> США</td>
+                <td> 2017</td>
+                <td> 1.26</td>
+                <td> Билл Кондон</td>
+            </tr>
+            <tr>
+                <td> Суперсемейка 2</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2018</td>
+                <td> 1.24</td>
+                <td> Брэд Бёрд</td>
+            </tr>
+            <tr>
+                <td> Форсаж 8</td>
+                <td> Боевик</td>
+                <td> США</td>
+                <td> 2017</td>
+                <td> 1.24</td>
+                <td> Ф. Гэри Грей</td>
+            </tr>
+            <tr>
+                <td> Железный человек 3</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2013</td>
+                <td> 1.21</td>
+                <td> Шейн Блэк</td>
+            </tr>
+            <tr>
+                <td> Миньоны</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2015</td>
+                <td> 1.16</td>
+                <td> Пьер Коффен</td>
+            </tr>
+            <tr>
+                <td> Первый мститель: Противостояние</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2016</td>
+                <td> 1.15</td>
+                <td> Энтони и Джо Руссо</td>
+            </tr>
+            <tr>
+                <td> Аквамен</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2018</td>
+                <td> 1.15</td>
+                <td> Джеймс Ван</td>
+            </tr>
+            <tr>
+                <td> Властелин колец: Возвращение короля</td>
+                <td> Фэнтези</td>
+                <td> Новая Зеландия</td>
+                <td> 2003</td>
+                <td> 1.15</td>
+                <td> Питер Джексон</td>
+            </tr>
+            <tr>
+                <td> Человек-паук: Вдали от дома</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 1.13</td>
+                <td> Джон Уоттс</td>
+            </tr>
+            <tr>
+                <td> Капитан Марвел</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 1.13</td>
+                <td> Анна Боден</td>
+            </tr>
+            <tr>
+                <td> Трансформеры 3: Тёмная сторона Луны</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2011</td>
+                <td> 1.12</td>
+                <td> Майкл Бэй</td>
+            </tr>
+            <tr>
+                <td> 007: Координаты «Скайфолл»</td>
+                <td> Боевик</td>
+                <td> Великобритания</td>
+                <td> 2012</td>
+                <td> 1.11</td>
+                <td> Сэм Мендес</td>
+            </tr>
+            <tr>
+                <td> Трансформеры: Время вымирать</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2014</td>
+                <td> 1.10</td>
+                <td> Майкл Бэй</td>
+            </tr>
+            <tr>
+                <td> Тёмный рыцарь: Возрождение легенды</td>
+                <td> Боевик</td>
+                <td> Великобритания</td>
+                <td> 2012</td>
+                <td> 1.08</td>
+                <td> Кристофер Нолан</td>
+            </tr>
+            <tr>
+                <td> Джокер</td>
+                <td> Триллер</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 1.07</td>
+                <td> Тодд Филлипс</td>
+            </tr>
+            <tr>
+                <td> Звёздные войны: Скайуокер. Восход</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 1.07</td>
+                <td> Джей Джей Абрамс</td>
+            </tr>
+            <tr>
+                <td> История игрушек 4</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2019</td>
+                <td> 1.07</td>
+                <td> Ли Анкрич</td>
+            </tr>
+            <tr>
+                <td> Пираты Карибского моря: Сундук мертвеца</td>
+                <td> Фэнтези</td>
+                <td> США</td>
+                <td> 2006</td>
+                <td> 1.07</td>
+                <td> Гор Вербински</td>
+            </tr>
+            <tr>
+                <td> Изгой-один: Звёздные войны. Истории</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 2016</td>
+                <td> 1.06</td>
+                <td> Гарет Эдвардс</td>
+            </tr>
+            <tr>
+                <td> Алиса в Стране чудес</td>
+                <td> Фэнтези</td>
+                <td> США</td>
+                <td> 2010</td>
+                <td> 1.03</td>
+                <td> Тим Бёртон</td>
+            </tr>
+            <tr>
+                <td> В поисках Дори</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2016</td>
+                <td> 1.03</td>
+                <td> Эндрю Стэнтон</td>
+            </tr>
+            <tr>
+                <td> Звёздные войны: Скрытая угроза</td>
+                <td> Фантастика</td>
+                <td> США</td>
+                <td> 1999</td>
+                <td> 1.03</td>
+                <td> Джордж Лукас</td>
+            </tr>
+            <tr>
+                <td> Зверополис</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 2016</td>
+                <td> 1.02</td>
+                <td> Байрон Ховард</td>
+            </tr>
+            <tr>
+                <td> Хоббит: Нежданное путешествие</td>
+                <td> Фэнтези</td>
+                <td> Новая Зеландия</td>
+                <td> 2012</td>
+                <td> 1.02</td>
+                <td> Питер Джексон</td>
+            </tr>
+            <tr>
+                <td> Гарри Поттер и Философский камень</td>
+                <td> Фэнтези</td>
+                <td> Великобритания</td>
+                <td> 2001</td>
+                <td> 1.02</td>
+                <td> Крис Коламбус</td>
+            </tr>
+            <tr>
+                <td> Тёмный рыцарь</td>
+                <td> Боевик</td>
+                <td> Великобритания</td>
+                <td> 2008</td>
+                <td> 1.00</td>
+                <td> Кристофер Нолан</td>
+            </tr>
+            <tr>
+                <td> Король Лев</td>
+                <td> Мультфильм</td>
+                <td> США</td>
+                <td> 1994</td>
+                <td> 1.08</td>
+                <td> Роджер Аллерс</td>
+            </tr>
+        </table>
+    </body>
+</html>
